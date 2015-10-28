@@ -15,8 +15,8 @@ class __TwigTemplate_ae8400c6bbc0fef8ecbe3b474a87675310b2e65eefe0902e2cc73efb08a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_28b71e65d8dcfc21ba5f0310a9d67c1a8dfbb6448dd9f7427a886faf56f0f80e = $this->env->getExtension("native_profiler");
-        $__internal_28b71e65d8dcfc21ba5f0310a9d67c1a8dfbb6448dd9f7427a886faf56f0f80e->enter($__internal_28b71e65d8dcfc21ba5f0310a9d67c1a8dfbb6448dd9f7427a886faf56f0f80e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::menu.html.twig"));
+        $__internal_64c6b3993fef2c29ba0f8567625b7e4fbeb892e08ac3af9e919f14574dd56c2c = $this->env->getExtension("native_profiler");
+        $__internal_64c6b3993fef2c29ba0f8567625b7e4fbeb892e08ac3af9e919f14574dd56c2c->enter($__internal_64c6b3993fef2c29ba0f8567625b7e4fbeb892e08ac3af9e919f14574dd56c2c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::menu.html.twig"));
 
         // line 1
         echo "<ul class=\"nav navbar-nav\">
@@ -33,10 +33,6 @@ class __TwigTemplate_ae8400c6bbc0fef8ecbe3b474a87675310b2e65eefe0902e2cc73efb08a
         <ul class=\"dropdown-menu\">
             <li><a href=\"";
         // line 10
-        echo $this->env->getExtension('routing')->getPath("computer_debug");
-        echo "\">Debug</a></li>
-            <li><a href=\"";
-        // line 11
         echo $this->env->getExtension('routing')->getPath("computer");
         echo "\">List</a></li>
         </ul>
@@ -45,7 +41,7 @@ class __TwigTemplate_ae8400c6bbc0fef8ecbe3b474a87675310b2e65eefe0902e2cc73efb08a
 </ul>
 ";
         
-        $__internal_28b71e65d8dcfc21ba5f0310a9d67c1a8dfbb6448dd9f7427a886faf56f0f80e->leave($__internal_28b71e65d8dcfc21ba5f0310a9d67c1a8dfbb6448dd9f7427a886faf56f0f80e_prof);
+        $__internal_64c6b3993fef2c29ba0f8567625b7e4fbeb892e08ac3af9e919f14574dd56c2c->leave($__internal_64c6b3993fef2c29ba0f8567625b7e4fbeb892e08ac3af9e919f14574dd56c2c_prof);
 
     }
 
@@ -61,7 +57,7 @@ class __TwigTemplate_ae8400c6bbc0fef8ecbe3b474a87675310b2e65eefe0902e2cc73efb08a
 
     public function getDebugInfo()
     {
-        return array (  40 => 11,  36 => 10,  27 => 4,  22 => 1,);
+        return array (  36 => 10,  27 => 4,  22 => 1,);
     }
 }
 /* <ul class="nav navbar-nav">*/
@@ -73,7 +69,6 @@ class __TwigTemplate_ae8400c6bbc0fef8ecbe3b474a87675310b2e65eefe0902e2cc73efb08a
 /*     <li class="dropdown">*/
 /*         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Computers <span class="caret"></span></a>*/
 /*         <ul class="dropdown-menu">*/
-/*             <li><a href="{{ path('computer_debug') }}">Debug</a></li>*/
 /*             <li><a href="{{ path('computer') }}">List</a></li>*/
 /*         </ul>*/
 /*     </li>*/
