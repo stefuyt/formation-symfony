@@ -144,6 +144,12 @@ $this->saveHandler->setName($name);
 }
 public function regenerate($destroy = false, $lifetime = null)
 {
+if (PHP_VERSION_ID >= 50400 && \PHP_SESSION_ACTIVE !== session_status()) {
+return false;
+}
+if (PHP_VERSION_ID < 50400 &&''=== session_id()) {
+return false;
+}
 if (null !== $lifetime) {
 ini_set('session.cookie_lifetime', $lifetime);
 }
