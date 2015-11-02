@@ -1,14 +1,25 @@
 services:
 
-    park.twig.computer_status_extension:
-        class: ParkBundle\Twig\ComputerStatusExtension
+    app.twig.computer_status_extension:
+        class: AppBundle\Twig\ComputerStatusExtension
         tags:
             - { name: twig.extension }
 
-    park.computer_manager:
-        class: ParkBundle\Services\ComputerManager
+    app.computer_manager:
+        class: AppBundle\Services\ComputerManager
         arguments: [@doctrine.orm.default_entity_manager]
 
-    park.calculator:
-        class: ParkBundle\Services\Calculator
+    app.calculator:
+        class: AppBundle\Services\Calculator
 
+    app.twig.has_right_extension:
+        class: AppBundle\Twig\HasRightExtension
+        arguments: [ @security.authorization_checker ]
+        tags:
+            - { name: twig.extension }
+
+    app.security.user:
+        class: AppBundle\Services\Security\UserSecurity
+        arguments: [ @security.encoder_factory ]
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }

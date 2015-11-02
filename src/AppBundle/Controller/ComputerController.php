@@ -4,16 +4,18 @@ namespace AppBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use AppBundleBundle\Entity\Computer;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use AppBundle\Entity\Computer;
 use AppBundle\Form\ComputerType;
 
 /**
  * Computer controller.
  *
- * @Route("/computer")
+ * @Route("/park/computer")
  */
 class ComputerController extends Controller
 {
@@ -27,7 +29,7 @@ class ComputerController extends Controller
      */
     public function indexAction()
     {
-        $manager =$this->get('park.computer_manager');
+        $manager =$this->get('app.computer_manager');
 
         return array(
             'entities' => $manager->getComputers(),
@@ -88,6 +90,11 @@ class ComputerController extends Controller
      */
     public function newAction()
     {
+
+        if (!$this->get('security.context')->isGranted('ROLE_ADMIN')) {
+            throw new AccessDeniedException('Accès limité à admin!');
+        }
+
         $entity = new Computer();
         $form   = $this->createCreateForm($entity);
 
@@ -128,6 +135,7 @@ class ComputerController extends Controller
      * @Route("/{id}/edit", name="computer_edit")
      * @Method("GET")
      * @Template()
+     * @Security("has_role('ROLE_ADMIN')");
      */
     public function editAction($id)
     {
@@ -173,6 +181,7 @@ class ComputerController extends Controller
      * @Route("/{id}", name="computer_update")
      * @Method("PUT")
      * @Template("AppBundle:Computer:edit.html.twig")
+     * @Security("has_role('ROLE_MODERATOR')");
      */
     public function updateAction(Request $request, $id)
     {
@@ -205,6 +214,7 @@ class ComputerController extends Controller
      *
      * @Route("/{id}", name="computer_delete")
      * @Method("DELETE")
+     * @Security("has_role('ROLE_SUPER_ADMIN')");
      */
     public function deleteAction(Request $request, $id)
     {
