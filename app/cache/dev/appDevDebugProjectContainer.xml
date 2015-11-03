@@ -600,6 +600,7 @@
     <parameter key="braincrafted_bootstrap.output_dir"></parameter>
     <parameter key="braincrafted_bootstrap.less_filter">lessphp</parameter>
     <parameter key="braincrafted_bootstrap.icon_tag">span</parameter>
+    <parameter key="app.security.user.class">AppBundle\Services\Security\UserSecurity</parameter>
     <parameter key="web_profiler.controller.profiler.class">Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController</parameter>
     <parameter key="web_profiler.controller.router.class">Symfony\Bundle\WebProfilerBundle\Controller\RouterController</parameter>
     <parameter key="web_profiler.controller.exception.class">Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController</parameter>
@@ -2056,7 +2057,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>56378fc7075082.63760283</argument>
+            <argument>56386f3a660629.26051042</argument>
           </service>
         </argument>
       </argument>
@@ -2405,7 +2406,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>56378fc7075082.63760283</argument>
+            <argument>56386f3a660629.26051042</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

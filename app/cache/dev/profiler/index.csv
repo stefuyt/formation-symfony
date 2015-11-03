@@ -44,3 +44,15 @@ d0627e,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/,1
 56f7ac,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/user,1446482372,,301
 663fa5,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/user/,1446482375,5598de,200
 5598de,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/user/,1446482375,,500
+5b4fc7,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/login,1446539071,,200
+b41c50,127.0.0.1,POST,http://localhost/site1/formation-symfony/web/app_dev.php/login_check,1446541225,,302
+ae9cea,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/,1446541227,,200
+0881f2,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/park/computer/,1446541308,,200
+ae5c87,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/park/computer/,1446541851,,302
+c83a1d,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/login,1446541852,,200
+320c69,127.0.0.1,POST,http://localhost/site1/formation-symfony/web/app_dev.php/login_check,1446541860,,302
+84a2fa,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/,1446541861,,200
+675c90,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/park/computer/,1446541868,,200
+4d7780,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/park/computer/new,1446541888,,200
+3f78ec,127.0.0.1,POST,http://localhost/site1/formation-symfony/web/app_dev.php/park/computer/,1446541926,,302
+267cb8,127.0.0.1,GET,http://localhost/site1/formation-symfony/web/app_dev.php/park/computer/29,1446541928,,200

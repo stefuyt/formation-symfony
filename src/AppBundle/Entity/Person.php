@@ -3,15 +3,20 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\Traits\TimeStampableTrait;
 
 /**
  * Person
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="AppBundle\Entity\PersonRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Person
 {
+
+    use TimeStampableTrait;
+
     /**
      * @var integer
      *
